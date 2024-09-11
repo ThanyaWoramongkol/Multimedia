@@ -1,0 +1,39 @@
+* {
+    margin: 20px;
+}
+#picture {
+    border-radius: 50%;
+}
+
+#spin-T {
+    animation: 4.2s linear infinite rotate;
+    transform-origin: center;
+}
+
+#spin-W {
+    animation: 4.5s linear infinite rotated;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotated {
+    from {
+        rotate: 360deg;
+    } to {
+        rotate: 0deg
+    }
+}
+
+.line {
+    stroke: black;
+    stroke-width: 5;
+    fill: transparent;
+    stroke-linecap: round;
+}
