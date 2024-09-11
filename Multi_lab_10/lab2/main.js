@@ -15,9 +15,9 @@ function init() {
 
     plane.name = 'plane-1';
 
-    box.position.y = box.geometry.parameters.height / 2;
     plane.rotation.x = Math.PI / 2;
-    pointLight.position.y = 2;
+    pointLight.position.y = 4;
+    pointLight.intensity = 2;
 
     // scene.add(box);
     scene.add(plane);
@@ -26,7 +26,10 @@ function init() {
     scene.add(boxGrid);
 
     gui.add(pointLight, 'intensity', 0, 10);
-    gui.add(pointLight.position, 'y', 0, 5);
+    gui.add(pointLight.position, 'x', 0, 20);
+    gui.add(pointLight.position, 'y', 0, 20);
+    gui.add(pointLight.position, 'z', 0, 20);
+    // gui.add(pointLight, 'penumbra', 0, 1);
 
     var camera = new THREE.PerspectiveCamera(
         50,
